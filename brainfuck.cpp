@@ -1,10 +1,3 @@
-//
-//  brainfuck.cpp
-//  
-//
-//  Created by Joseph Harrison on 06/04/2019.
-//
-
 #include <iostream>
 #include <string>
 
@@ -79,7 +72,7 @@ int main(void)
     {
         cells[i] = 0;
     }
-    
+     
     //interpreter runtime
     while (line.compare("quit") != 0)
     {
@@ -98,7 +91,7 @@ int main(void)
             switch (line[insptr])
             {
                 //increment data pointer
-                case '>': dataptr = (dataptr - 1) % CELLS;
+                case '>': dataptr = (dataptr + 1) % CELLS;
                           break;
                 //decrement data pointer
                 case '<': dataptr = (dataptr - 1) % CELLS;
